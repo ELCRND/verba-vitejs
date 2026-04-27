@@ -29,6 +29,10 @@
     margin-top: rem(50);
     overflow: hidden;
 
+    &__list{
+      display: flex;
+    }
+
     &-prev,
     &-next {
       @include flex-center;

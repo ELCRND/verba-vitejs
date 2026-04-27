@@ -106,6 +106,7 @@
       color: rgba(49, 58, 69, 0.7);
     }
   }
+
   &__phone {
     @include flex-center;
     width: rem(234);
@@ -118,8 +119,54 @@
     font-weight: 500;
     font-size: rem(16);
     color: var(--color-red);
-  }
+  overflow: hidden; 
+  position: relative;
+  
+
+  &:hover{
+    opacity: 1 !important;
+      color: var(--color-white);
+
+  .header__phone-icon {
+   &::before {
+        opacity: 1 ;
+    scale: 20 10;
+   }
+
+   path{
+    fill: var(--color-white);
+   }
+}}
+
+&-icon{
+  &::before {
+  content: '';
+  width:rem(24);
+  height: rem(24);
+  background: var(--color-red);
+  border-radius: 50%;
+  position: absolute;
+    right: 0;
+    translate: -150% ;
+    opacity: 0;
+  transition: scale 0.5s ease;
 }
+
+svg{
+    position: relative;
+  z-index: 1;
+}
+
+}
+
+span{
+  position: relative;
+  z-index: 1;
+
+}
+
+
+}}
 
 /* ═══════════════════════════════════╗
    HEADER / tablet                    ║
